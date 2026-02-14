@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Windy Willows Taxi & Tours - Premium transport services in Sri Lanka with certified safety driver Gayashan. Airport transfers, private tours, and custom itineraries.">
+    <meta name="keywords"
+        content="Sri Lanka Private Driver 2026, Safe Taxi Sri Lanka, Colombo Airport Transfer, Sigiriya Tour Driver, Female-friendly driver Sri Lanka, Best Wagon R Taxi Colombo, Sri Lanka Travel Concierge">
+    <title>Windy Willows Taxi & Tours | Safe & Premium Transport Sri Lanka</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Windy Willows<span class="dot">.</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#safety" class="nav-link">Safety Standards</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link btn-contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Admin Toolbar -->
+    <div id="admin-bar" class="admin-bar" style="display: none;">
+        <span>Admin Mode</span>
+        <button onclick="saveChanges()" class="btn-primary" style="padding: 5px 15px; font-size: 0.8rem;">Save
+            Changes</button>
+        <button onclick="toggleAdmin()" class="btn-outline"
+            style="padding: 5px 15px; font-size: 0.8rem; background: #eee;">Exit</button>
+    </div>
+
+    <!-- Hidden File Input for Image Uploads -->
+    <input type="file" id="image-upload-input" class="hidden-file-input" accept="image/*">
+
+    <!-- Secret Admin Trigger -->
+    <div style="position: fixed; bottom: 0; right: 0; width: 20px; height: 20px; cursor: default;"
+        ondblclick="toggleAdmin()"></div>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1 class="editable" data-key="hero-title">Relax in <span class="highlight">Purple Comfort</span> – Your
+                Safest Journey Begins Here</h1>
+            <p class="editable" data-key="hero-subtitle">Your premium travel partner for airport transfers, custom
+                tours, and scenic adventures.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary editable" data-key="btn-book">Book Your Ride</a>
+                <a href="#services" class="btn btn-outline editable" data-key="btn-explore">Explore Services</a>
+            </div>
+            <div class="trust-badge">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span class="editable" data-key="trust-badge">SAPTCO/RATP Certified Manual</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Founder/Safety Section -->
+    <section id="safety" class="section safety-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="editable" data-key="safety-title">Safety First, Always</h2>
+                <p class="subtitle editable" data-key="safety-subtitle">Meet your expert driver and guide</p>
+            </div>
+
+            <div class="safety-grid">
+                <div class="founder-info">
+                    <h3 class="editable" data-key="founder-name">Founder & Head Driver: Gayashan</h3>
+                    <p class="lead editable" data-key="founder-role">Former International Bus Captain Trainer & Driver
+                        Quality Monitor.</p>
+                    <p class="editable" data-key="founder-desc">With extensive experience in international driving
+                        standards, Gayashan brings a level of
+                        professionalism and safety rarely found in standard taxi services.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check-circle"></i> <span class="editable"
+                                data-key="cert-1">SAPTCO/RATP Certified</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span class="editable" data-key="cert-2">Expert in
+                                Safe Mountain Driving</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span class="editable"
+                                data-key="cert-3">International Safety Standards Compliance</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span class="editable"
+                                data-key="cert-4">Female-Friendly & Family Safe</span></li>
+                    </ul>
+                </div>
+                <div class="vehicle-info">
+                    <div class="card vehicle-card">
+                        <h3 class="editable" data-key="vehicle-title">Our Premium Vehicle</h3>
+                        <p class="editable" data-key="vehicle-desc">A meticulously maintained, 100% Air-Conditioned
+                            Suzuki Wagon R designed for comfort.</p>
+                        <ul class="vehicle-features">
+                            <li><i class="fa-solid fa-snowflake"></i> <span class="editable" data-key="feat-1">Fully
+                                    Air-Conditioned</span></li>
+                            <li><i class="fa-solid fa-sparkles"></i> <span class="editable"
+                                    data-key="feat-2">Satisfyingly Clean Interiors</span></li>
+                            <li><i class="fa-solid fa-suitcase"></i> <span class="editable" data-key="feat-3">Smart
+                                    Luggage (2 Large + 2 Small Bags)</span></li>
+                            <li><i class="fa-solid fa-pump-medical"></i> <span class="editable"
+                                    data-key="feat-4">Hygiene Prioritized</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="editable" data-key="services-title">Our Services</h2>
+                <p class="subtitle editable" data-key="services-subtitle">Tailor-made experiences for every traveler</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                    <h3 class="editable" data-key="service-1-title">Airport Transfers</h3>
+                    <p class="editable" data-key="service-1-desc">Seamless pickups and drop-offs at Bandaranaike
+                        International Airport (BIA). Punctual and
+                        stress-free.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3 class="editable" data-key="service-2-title">Custom Tours</h3>
+                    <p class="editable" data-key="service-2-desc">Day trips and multi-day island-wide tours covering
+                        Sigiriya, Kandy, Ella, Galle, and more.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
+                    <h3 class="editable" data-key="service-3-title">Wildlife Experiences</h3>
+                    <p class="editable" data-key="service-3-desc">Specialized trips to see sea turtles in
+                        Unawatuna/Dalawella and other nature hotspots.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-road"></i></div>
+                    <h3 class="editable" data-key="service-4-title">Expressway Convenience</h3>
+                    <p class="editable" data-key="service-4-desc">Fast and efficient travel to Dambulla and Kurunegala
+                        using the Central Expressway.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class="fa-solid fa-gift"></i></div>
+                    <h3 class="editable" data-key="service-5-title">Concierge Services</h3>
+                    <p class="editable" data-key="service-5-desc">On-time delivery of flower bouquets, chocolates, and
+                        gift collections for special occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenic Routes / Visuals Section -->
+    <section class="section visual-section">
+        <div class="container">
+            <div class="visual-content">
+                <h2>Scenic Mountain Routes</h2>
+                <p>Experience the breathtaking views of Sri Lanka's highlands with a driver who knows the safest paths.
+                </p>
+                <a href="#gallery" class="btn btn-outline-light">View Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Tour Gallery</h2>
+                <p class="subtitle">Memories from our journeys</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery Images -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588667500588-4660bd2ac0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Sigiriya Rock">
+                    <div class="overlay"><span>Sigiriya Rock</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a40c38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Sea Turtles">
+                    <div class="overlay"><span>Wildlife Experiences</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Clean Interiors">
+                    <div class="overlay"><span>Comfort & Hygiene</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc19d91d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Mountain Views">
+                    <div class="overlay"><span>Scenic Routes</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1520483602335-3b3dd1d0c159?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Happy Guests">
+                    <div class="overlay"><span>Happy Guests</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596706059902-1a48c66e288e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Airport Transfer">
+                    <div class="overlay"><span>Airport Transfers</span></div>
+                </div>
+            </div>
+
+            <!-- Admin Only: Add Image Button -->
+            <div class="admin-controls" style="text-align: center; margin-top: 2rem; display: none;">
+                <button onclick="addNewGalleryImage()" class="btn btn-outline"><i class="fa-solid fa-plus"></i> Add New
+                    Image</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>What Guests Say</h2>
+                <p class="subtitle">Real experiences from our travelers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Gayashan made our trip to Ella unforgettable! His driving was incredibly safe, especially on the
+                        winding roads."</p>
+                    <cite>- Sarah & Mike, UK</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The car was spotless and very comfortable. Perfect for our family airport transfer."</p>
+                    <cite>- The Anderson Family, Australia</cite>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Highly recommend for solo female travelers. Very professional and trustworthy."</p>
+                    <cite>- Elena, Germany</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <h2>Ready to Explore Sri Lanka?</h2>
+                    <p>Book your safe and premium ride today. Contact us on WhatsApp for instant booking.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a href="https://wa.me/94761949619" target="_blank" class="whatsapp-link">+94 76 194
+                                9619</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Colombo, Sri Lanka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-action">
+                    <a href="https://wa.me/94761949619" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Windy Willows Taxi & Tours</div>
+            <p class="seo-text">Your trusted Sri Lanka Private Driver for 2026. Specializing in Safe Taxi services,
+                Colombo Airport Transfers, and custom island tours. Experience the best AC Wagon R Taxi in Colombo with
+                our specific focus on safety and hygiene.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#safety">Safety</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Windy Willows Taxi & Tours. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
